@@ -1,2 +1,2 @@
 # wxapp-startkit
-微信小程序 StartKit
+微信小程序 StartKit (Babel + SASS)
