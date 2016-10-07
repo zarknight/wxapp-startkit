@@ -1,4 +1,5 @@
 const app = getApp()
+const util = require('../../utils/util.js')
 
 new class IndexPage {
 
@@ -11,7 +12,12 @@ new class IndexPage {
   // 通过定义方法的方式将不会被检测到，必须以定义属性的方式才能被检测到：
 
   onButtonTap = ()=> {
-    console.log('... button tap ...')
+    util.wxPromisify(wx.setStorage)({
+      key: "abc",
+      value: "11111"
+    }).then((res) => {
+      console.log(">>>>>>>>", res)
+    })
   }
 
   onViewTap = () => {

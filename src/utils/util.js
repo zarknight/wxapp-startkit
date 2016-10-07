@@ -1,39 +1,37 @@
 function formatTime(date) {
-  var year = date.getFullYear();
-  var month = date.getMonth() + 1;
-  var day = date.getDate();
+  var year = date.getFullYear()
+  var month = date.getMonth() + 1
+  var day = date.getDate()
 
-  var hour = date.getHours();
-  var minute = date.getMinutes();
-  var second = date.getSeconds();
+  var hour = date.getHours()
+  var minute = date.getMinutes()
+  var second = date.getSeconds()
 
-  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':');
+  return [year, month, day].map(formatNumber).join('/') + ' ' + [hour, minute, second].map(formatNumber).join(':')
 }
 
 function formatNumber(n) {
-  n = n.toString();
-  return n[1] ? n : '0' + n;
+  n = n.toString()
+  return n[1] ? n : '0' + n
 }
 
-function promisify(func) {
-  return function () {
-    let args = arguments[0];
-
+function wxPromisify(fn) {
+  return function (obj) {
     return new Promise((resolve, reject) => {
-      args.success = function (res) {
-        resolve(res);
+      obj.success = function (res) {
+        resolve(res)
       }
 
-      args.fail = function (res) {
-        reject(res);
+      obj.fail = function (res) {
+        reject(res)
       }
 
-      func(args);
+      fn(obj)
     })
   }
 }
 
 module.exports = {
   formatTime: formatTime,
-  promisify: promisify
+  wxPromisify: wxPromisify
 }
