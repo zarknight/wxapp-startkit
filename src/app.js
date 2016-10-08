@@ -1,5 +1,7 @@
 exports = {}
 
+const util = require('./utils/util.js')
+
 new class AppMain {
 
   globalData = {
@@ -7,24 +9,19 @@ new class AppMain {
   }
 
   getUserInfo = () => {
-    return new Promise((resolve, reject) => {
-      let userInfo = this.globalData.userInfo
+    let userInfo = this.globalData.userInfo
 
-      if (userInfo) {
-        resolve(userInfo)
-      } else {
-        wx.login({
-          success: () => {
-            wx.getUserInfo({
-              success: (res) => {
-                userInfo = this.globalData.userInfo = res.userInfo
-                resolve(userInfo)
-              }
-            })
-          }
-        })
-      }
-    })
+    if (userInfo) {
+      return new Promise((resolve, reject) => resolve(userInfo))
+
+    } else {
+      return util.wxPromisify(wx.login)().then(() => {
+        return util.wxPromisify(wx.getUserInfo)()
+      }).then((res) => {
+        let info = this.globalData.userInfo = res.userInfo
+        return info
+      })
+    }
   }
 
   constructor() {
