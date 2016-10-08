@@ -1,6 +1,10 @@
 const app = getApp()
 const util = require('../../utils/util.js')
 
+// 微信小程序的模块机制导致的问题，很别扭，只能先这样用了
+const _underscore = require('../../libs/underscore.js')
+const _ = exports._
+
 new class IndexPage {
 
   data = {
@@ -16,7 +20,9 @@ new class IndexPage {
       key: "abc",
       value: "11111"
     }).then((res) => {
-      console.log(">>>>>>>>", res)
+      console.log(">>>>>>>> result:", res)
+    }).catch((res) => {
+      console.error(">>>>>>> error:", res)
     })
   }
 

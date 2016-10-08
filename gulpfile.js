@@ -1,6 +1,6 @@
 const gulp = require('gulp')
 const del = require('del')
-const runSequence = require('run-sequence');
+const runSequence = require('run-sequence')
 const $ = require('gulp-load-plugins')()
 
 // -------------------- JSON Files ----------------------
