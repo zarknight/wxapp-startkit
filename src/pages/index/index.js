@@ -18,7 +18,7 @@ new class IndexPage {
   onButtonTap = ()=> {
     util.wxPromisify(wx.setStorage)({
       key: "abc",
-      value: "11111"
+      data: "11111"
     }).then((res) => {
       console.log(">>>>>>>> result:", res)
     }).catch((res) => {
