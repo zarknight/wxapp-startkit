@@ -1,4 +1,6 @@
 const gulp = require('gulp')
+const del = require('del')
+const runSequence = require('run-sequence');
 const $ = require('gulp-load-plugins')()
 
 // -------------------- JSON Files ----------------------
@@ -58,6 +60,12 @@ gulp.task('scripts:watch', () => {
 
 // ------------------------------------------------------
 
+gulp.task('clean', () => {
+  return del(['./dist/**'])
+})
+
+// ------------------------------------------------------
+
 gulp.task('build', [
   'json',
   'images',
@@ -65,6 +73,11 @@ gulp.task('build', [
   'styles',
   'scripts'
 ])
+
+
+gulp.task('clean-build', (callback) => {
+  runSequence('clean', 'build', callback)
+})
 
 gulp.task('watch', [
   'json:watch',
@@ -75,6 +88,6 @@ gulp.task('watch', [
 ])
 
 gulp.task('default', [
-  'build',
+  'clean-build',
   'watch'
 ])
