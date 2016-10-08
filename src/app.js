@@ -1,3 +1,5 @@
+exports = {}
+
 new class AppMain {
 
   globalData = {
