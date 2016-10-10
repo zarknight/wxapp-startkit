@@ -1,5 +1,6 @@
 const app = getApp()
 const util = require('../../utils/util.js')
+const userService = require('../../services/user.service.js')
 
 // 微信小程序的模块机制导致的问题，很别扭，只能先这样用了
 const _underscore = require('../../libs/underscore.js')
@@ -36,8 +37,11 @@ new class IndexPage {
 
   onLoad() {
     console.log(">>> page:onLoad", app)
-    app.getUserInfo().then((userInfo) => {
-      this.setData({userInfo: userInfo})
+
+    userService.getUserInfo().then((userInfo) => {
+      this.setData({
+        userInfo: userInfo
+      })
     })
   }
 
