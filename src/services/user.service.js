@@ -1,5 +1,6 @@
+import util from '../utils/util'
+
 const app = getApp()
-const util = require('../utils/util.js')
 
 function getUserInfo() {
   let userInfo = app.globalData.userInfo

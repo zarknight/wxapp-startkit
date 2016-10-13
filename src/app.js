@@ -1,7 +1,3 @@
-exports = {}
-
-const util = require('./utils/util.js')
-
 new class AppMain {
 
   globalData = {
@@ -14,10 +10,6 @@ new class AppMain {
 
   onLaunch() {
     console.log("app launch")
-
-    let logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
   }
 
   onShow() {
