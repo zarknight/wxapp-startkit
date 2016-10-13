@@ -20,9 +20,9 @@ new class IndexPage {
     console.log(">>> page:onLoad", app)
 
     userService.getUserInfo().then((userInfo) => {
-      this.setData({
-        userInfo: userInfo
-      })
+      this.setData({userInfo: userInfo})
+    }).catch((e) => {
+      console.log(e);
     })
   }
 
