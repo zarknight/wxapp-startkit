@@ -17,4 +17,4 @@ cache:
 before_script:
 
 script:
-  - npm run build:clean
+  - npm run build:prod
