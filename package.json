@@ -1,9 +1,27 @@
 {
-  "name": "application-name",
-  "version": "0.0.1",
+  "name": "wxapp-startkit",
+  "version": "0.1.0",
+  "description": "A startkit for wechat weapp development",
+  "author": "Kevin Zhang <zarknight@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/zarknight/wxapp-startkit#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/zarknight/wxapp-startkit.git"
+    "url": "git+https://github.com/zarknight/wxapp-startkit.git"
+  },
+  "keywords": [
+    "weapp",
+    "startkit",
+    "boilerplate",
+    "wechat",
+    "weixin",
+    "xiaochengxu",
+    "zarknight"
+  ],
+  "scripts": {
+    "build:clean": "gulp build:clean",
+    "watch:clean": "gulp watch:clean",
+    "start": "npm run watch:clean"
   },
   "devDependencies": {
     "babel-eslint": "^7.0.0",
