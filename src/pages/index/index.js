@@ -7,7 +7,7 @@ new class IndexPage {
 
   data = {
     userInfo: {},
-    motto: 'Hello World'
+    greeting: 'Hello,World!!'
   }
 
   ///////////////////////////////////////////////////////////////////////////

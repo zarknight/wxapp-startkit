@@ -19,6 +19,7 @@
     "zarknight"
   ],
   "scripts": {
+    "build:prod": "gulp build:prod",
     "build:clean": "gulp build:clean",
     "watch:clean": "gulp watch:clean",
     "start": "npm run watch:clean"
@@ -30,11 +31,17 @@
     "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
+    "gulp-cssnano": "^2.1.2",
     "gulp-eslint": "^3.0.1",
     "gulp-ext-replace": "^0.3.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-if": "^2.0.1",
     "gulp-jsonlint": "^1.1.2",
+    "gulp-jsonminify": "^1.0.0",
     "gulp-load-plugins": "^1.3.0",
     "gulp-sass": "^2.3.2",
+    "gulp-sourcemaps": "^2.1.1",
+    "gulp-uglify": "^2.0.0",
     "run-sequence": "^1.2.2"
   }
 }
