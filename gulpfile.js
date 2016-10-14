@@ -3,9 +3,25 @@ const del = require('del')
 const runSequence = require('run-sequence')
 const $ = require('gulp-load-plugins')()
 
+// -------------------- Lint ---------------------------
+
+gulp.task('jslint', () => {
+  return gulp.src(['./src/**/*.js'])
+    .pipe($.eslint())
+    .pipe($.eslint.format())
+    .pipe($.eslint.failAfterError());
+});
+
+gulp.task('jsonlint', () => {
+  return gulp.src(['./src/**/*.json'])
+    .pipe($.jsonlint())
+    .pipe($.jsonlint.reporter())
+    .pipe($.jsonlint.failAfterError());
+});
+
 // -------------------- JSON Files ----------------------
 
-gulp.task('json', () => {
+gulp.task('json', ['jsonlint'], () => {
   return gulp.src('./src/**/*.json').pipe(gulp.dest('./dist'))
 })
 
@@ -48,7 +64,7 @@ gulp.task('styles:watch', () => {
 
 // -------------------- JS Files ------------------------
 
-gulp.task('scripts', () => {
+gulp.task('scripts', ['jslint'], () => {
   return gulp.src('./src/**/*.js')
     .pipe($.babel())
     .pipe(gulp.dest('./dist'))
@@ -64,8 +80,6 @@ gulp.task('clean', () => {
   return del(['./dist/**'])
 })
 
-// ------------------------------------------------------
-
 gulp.task('build', [
   'json',
   'images',
@@ -73,11 +87,6 @@ gulp.task('build', [
   'styles',
   'scripts'
 ])
-
-
-gulp.task('clean-build', (callback) => {
-  runSequence('clean', 'build', callback)
-})
 
 gulp.task('watch', [
   'json:watch',
@@ -87,7 +96,8 @@ gulp.task('watch', [
   'scripts:watch'
 ])
 
-gulp.task('default', [
-  'clean-build',
-  'watch'
-])
+gulp.task('build:clean', (callback) => runSequence('clean', 'build', callback))
+
+gulp.task('watch:clean', (callback) => runSequence('build:clean', 'watch', callback))
+
+gulp.task('default', ['watch:clean'])
