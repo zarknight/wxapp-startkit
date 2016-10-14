@@ -6,7 +6,7 @@
 [![devDependency Status](https://david-dm.org/zarknight/wxapp-startkit/dev-status.svg)](https://david-dm.org/zarknight/wxapp-startkit#info=devDependencies)
 
 #### 下载代码
-    git clone https://github.com/zce/weapp-boilerplate.git
+    git clone https://github.com/zarknight/wxapp-startkit.git
     
 #### 安装依赖库
     npm install
