@@ -14,8 +14,8 @@
 当前本StartKit中使用bluebird作为Promise实现库，待小程序框架本身解决问题后，理想情况下可以使用babel-polyfill来作为ES6填充库。
 
 #### 微信小程序开发视频教程:
-[微信小程序开发-初探篇](http://v.youku.com/v_show/id_XMTc2ODA0Nzc4OA==.html)
-[微信小程序开发-框架篇1](http://v.youku.com/v_show/id_XMTc3NDQ2MjQ3Mg==.html)
+* [微信小程序开发-初探篇](http://v.youku.com/v_show/id_XMTc2ODA0Nzc4OA==.html)
+* [微信小程序开发-框架篇1](http://v.youku.com/v_show/id_XMTc3NDQ2MjQ3Mg==.html)
 
 #### 下载代码
     git clone https://github.com/zarknight/wxapp-startkit.git
