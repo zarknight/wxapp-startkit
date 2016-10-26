@@ -3,7 +3,7 @@ sudo: false
 language: node_js
 
 node_js:
-  - stable
+  - 6.9.1
 
 notifications:
   email:
