@@ -16,6 +16,10 @@
 #### 微信小程序开发视频教程:
 * [微信小程序开发-初探篇](http://v.youku.com/v_show/id_XMTc2ODA0Nzc4OA==.html)
 * [微信小程序开发-框架篇1](http://v.youku.com/v_show/id_XMTc3NDQ2MjQ3Mg==.html)
+* 微信小程序开发-框架篇2(视图层) -- 即将到来
+
+#### 微信小程序开发群
+* QQ群号: 511389428
 
 #### 下载代码
     git clone https://github.com/zarknight/wxapp-startkit.git
