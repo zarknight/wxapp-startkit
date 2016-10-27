@@ -13,11 +13,11 @@ new class AppMain {
   }
 
   onShow() {
-    console.log("app show:", this.getCurrentPage())
+    console.log("app show:", getCurrentPages())
   }
 
   onHide() {
-    console.log("app hide:", this.getCurrentPage())
+    console.log("app hide:", getCurrentPages())
   }
 
 }
