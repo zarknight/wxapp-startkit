@@ -24,7 +24,7 @@
 * ...
 
 #### 微信小程序开发文章教程:
-[请访问我的简书](http://www.jianshu.com/users/d0dea96b2432)
+* [访问我的简书](http://www.jianshu.com/users/d0dea96b2432)
 
 #### 微信小程序开发群
 * QQ群号: 511389428
