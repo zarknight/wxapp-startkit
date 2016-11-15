@@ -10,7 +10,7 @@
   </view>
 
   <view>
-    <button size="mini" bindtap="onButtonTap">Test</button>
+    <button class="weui-btn" type="primary" size="mini" bindtap="onButtonTap">Test</button>
   </view>
 
 </view>

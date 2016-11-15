@@ -84,7 +84,7 @@ gulp.task('templates:watch', () => {
 // -------------------- SCSS Files ----------------------
 
 gulp.task('styles', () => {
-  return gulp.src('./src/**/*.scss')
+  return gulp.src('./src/**/*.wxss')
     .pipe($.sass().on('error', $.sass.logError))
     .pipe($.if(prod, $.cssnano()))
     .pipe($.extReplace('.wxss'))
@@ -92,7 +92,7 @@ gulp.task('styles', () => {
 })
 
 gulp.task('styles:watch', () => {
-  gulp.watch('./src/**/*.scss', ['styles'])
+  gulp.watch('./src/**/*.wxss', ['styles'])
 })
 
 // -------------------- JS Files ------------------------
