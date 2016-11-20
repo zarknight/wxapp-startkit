@@ -18,10 +18,7 @@
 * [微信小程序开发-框架篇1](http://v.youku.com/v_show/id_XMTc3NDQ2MjQ3Mg==.html)
 * [微信小程序开发-框架篇2 WXML](http://v.youku.com/v_show/id_XMTc3NzE3Mjk4MA==.html)
 * [微信小程序开发-框架篇3 事件机制](http://v.youku.com/v_show/id_XMTc4MzY4Njk5Ng==.html)
-* 微信小程序开发-框架篇4 样式机制 --- 即将到来
-* 微信小程序开发-基于ES6的开发 --- 敬请期待
-* 微信小程序开发-构建复杂界面 --- 敬请期待
-* 微信小程序开发-建立服务器端 --- 敬请期待
+* [微信小程序开发-实例篇 法律手册](http://v.youku.com/v_show/id_XMTgyNzc3ODU2OA==.html)
 * ...
 
 #### 微信小程序开发文章教程:
